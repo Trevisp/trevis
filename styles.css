@@ -1,0 +1,196 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1, h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .highlight {
+    color: #58a6ff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161b22;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: #58a6ff;
+  }
+  
+  .logo span {
+    color: #d2a8ff;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a:hover {
+    color: #d2a8ff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(145deg, #0d1117, #161b22);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .hero .content {
+    animation: fadeIn 2s ease;
+  }
+  
+  .btn {
+    background-color: #58a6ff;
+    color: #0d1117;
+    padding: 10px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #d2a8ff;
+    color: #fff;
+  }
+  
+  /* Portfolio */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+  }
+  
+  .project-card {
+    background: #161b22;
+    padding: 30px;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    border-color: #58a6ff;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background: #161b22;
+    padding: 20px;
+    text-align: center;
+    color: #8b949e;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate {
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  /* Hamburger icon (hidden on desktop) */
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: #58a6ff;
+}
+
+/* Side nav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #161b22;
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover{
+  color: #d2a8ff;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  color: #58a6ff;
+}
+
+/* Responsive rules */
+@media screen and (max-width: 768px) {
+  #nav-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
